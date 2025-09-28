@@ -1,0 +1,69 @@
+# ~/.aerospace.toml
+
+# keep default scalar options (you can omit ones you don’t override)
+# but explicitly define the key parts we care about.
+
+# (optional) whether to normalize the tiling tree
+enable-normalization-flatten-containers = true
+enable-normalization-opposite-orientation-for-nested-containers = true
+
+# default layout for new root containers
+default-root-container-layout = "tiles"
+default-root-container-orientation = "auto"
+
+# key mapping preset
+[key-mapping]
+preset = "qwerty"
+
+# gaps — you may adjust
+[gaps]
+inner.horizontal = 5
+inner.vertical = 5
+outer.left = 0
+outer.right = 0
+outer.top = 0
+outer.bottom = 0
+
+# Bindings for the “main” mode
+[mode.main.binding]
+# Switch to workspace 1..5 using Option(alt) + number
+alt-1 = "workspace 1"
+alt-2 = "workspace 2"
+alt-3 = "workspace 3"
+alt-4 = "workspace 4"
+alt-5 = "workspace 5"
+
+# Move the focused window to workspace 1..5 using Option+Shift+number
+alt-shift-1 = "move-node-to-workspace 1"
+alt-shift-2 = "move-node-to-workspace 2"
+alt-shift-3 = "move-node-to-workspace 3"
+alt-shift-4 = "move-node-to-workspace 4"
+alt-shift-5 = "move-node-to-workspace 5"
+
+# Toggle floating / tiling mode via Option (alt) + Space
+alt-space = "layout floating tiling"
+
+# (Optional) other useful navigation / move keys (you can comment out if unwanted)
+alt-h = "focus left"
+alt-l = "focus right"
+alt-j = "focus down"
+alt-k = "focus up"
+
+alt-shift-h = "move left"
+alt-shift-l = "move right"
+alt-shift-j = "move down"
+alt-shift-k = "move up"
+
+# You might also want a binding to reload config
+alt-r = "reload-config"
+
+# You may define additional binding modes if needed
+# (not necessary here if you keep everything in main mode)
+
+# Callbacks: on window creation, e.g. force Finder (or other apps) to float
+[[on-window-detected]]
+if.app-id = "com.apple.finder"
+run = "layout floating"
+
+# If you want always automatically float some windows (e.g. dialogs) you can add more callbacks
+
