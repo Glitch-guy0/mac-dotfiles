@@ -31,3 +31,6 @@ export PATH="/Users/prajwal/.codeium/windsurf/bin:$PATH"
 
 # Added by Antigravity
 export PATH="/Users/prajwal/.antigravity/antigravity/bin:$PATH"
+
+# opencode
+export PATH=/Users/prajwal/.opencode/bin:$PATH
